@@ -1,0 +1,46 @@
+<!-- views/login.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body style="text-align: center;">
+    <h1>Register Karyawan</h1>
+    <% if (error) { %>
+        <p style="color: red;"><%= error %></p>
+    <% } %>
+    <form method="post" action="/karyawan/register">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="nama" name="nama" required>
+        </div>
+       <div style="margin-top: 2%;">
+        <label for="alamat">alamat</label>
+        <textarea placeholder="masukkan alamat" id="alamat" name="alamat"></textarea>
+       </div>
+       <div style="margin-top: 2%;">
+        <label for="gender">Select Gender:</label>
+        <select id="gend" name="gend">
+            <option value="L">laki-laki</option>
+            <option value="P">perempuan</option>
+        </select>
+       </div>
+       <div style="margin-top: 2%;">
+        <label for="username">Photo</label>
+        <input type="file" id="photo" name="photo" required>
+       </div>
+       <div  style="margin-top: 2%;">
+        <label for="username">Tanggal Lahir</label>
+        <input type="date" id="tgl_lahir" name="tgl_lahir" required>
+       </div>
+       <div style="margin-top: 2%;">
+        <label for="username">Status</label>
+        <select id="gend" name="gend">
+            <option value="1">single</option>
+            <option value="0">Menikah</option>
+        </select>
+       </div>
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
